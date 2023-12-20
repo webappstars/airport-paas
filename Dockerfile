@@ -10,7 +10,6 @@ COPY entrypoint.sh /app/entrypoint.sh
 ENV TZ="Asia/Shanghai"
 ENV NODE_ENV="production"
 RUN apk update && \
-    apk upgrade && \
     # Set timezone
     apk add --no-cache tzdata && \
     ln -sf /usr/share/zoneinfo/$TZ /etc/localtime && \
